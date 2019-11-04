@@ -1,0 +1,13 @@
+body {
+  background-color: mediumspringgreen;
+}
+h1 {
+  color: blue;
+  font-family: "Saira Condensed", sans-serif;
+  text-align: center;
+  font-size: 400%;
+}
+p {
+  color: red;
+  border: 1px solid black;
+}
