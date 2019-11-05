@@ -1,0 +1,2 @@
+# Ignore config.php since it contains username and password to the database
+config.php
