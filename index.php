@@ -19,8 +19,6 @@
     </ul>
   </div>
 
-
-
 <p style="font-family:arial" align="center"><b>Excel,the nation's second and south india's first event fest of its kind,was started in 2001 by the students of Govt.Model Engineering College. The aim was simple: to inspire, innovate,engineer.Over the years, Excel has grown exponentially,consistently playing host to some of the most reputed companies.</b></p>
   <a style="text-decoration:none" href="button3.html">
 <button class="btn btn1">
