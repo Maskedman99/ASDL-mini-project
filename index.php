@@ -7,24 +7,22 @@
 <body>
 
   <div class="navigation-bar">
-    <h class="header"><b>EVENTS BOOKER</b></h>	
-    <ul>
-     <button onclick="document.getElementById('id01').style.display='block'">Login</button>
-    </ul>
+    <h class="header"><b>EVENTS BOOKER</b></h>	    
+    <button class ="login" onclick="document.getElementById('id01').style.display='block'">Login</button>
   </div>
 
   <div>
 	
 	<a style="text-decoration:none" href="EventsTech.php">
 		<button class="btn">
-	   		<img src="imgs\tech.png" alt="jelly" height="200" width="300" class="float-img">
+	   		<img src="imgs\tech.png" class="float-img">
     			<p><b>Tech Events</b></p>
 		</button>
 	</a>
 
 	<a style="text-decoration:none" href="EventsNonTech.php">
 		<button  class="btn">
-		    <img src="imgs\non tech.png" alt="fresh" height="200" width="300" class="float-img">
+		    <img src="imgs\non tech.png" class="float-img">
 		    <p><b>Non-Tech Events</b></p>
 		</button>
 	</a>
@@ -44,7 +42,7 @@
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
 
-      <button type="submit">Login</button>
+      <button type="submit" style="cursor:pointer">Login</button>
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
     </div>
   </form>
