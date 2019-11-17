@@ -13,14 +13,14 @@
 
   <div>
 	
-	<a style="text-decoration:none" href="EventsTech.php">
+	<a style="text-decoration:none" href="events page/events.php?E=Y">
 		<button class="btn">
 	   		<img src="imgs\tech.png" class="float-img">
     			<p><b>Tech Events</b></p>
 		</button>
 	</a>
 
-	<a style="text-decoration:none" href="EventsNonTech.php">
+	<a style="text-decoration:none" href="events page/events.php?E=N">
 		<button  class="btn">
 		    <img src="imgs\non tech.png" class="float-img">
 		    <p><b>Non-Tech Events</b></p>
