@@ -22,10 +22,23 @@
 
 <body>
 	<?php
+		echo '<table>';
+	        echo '<th>Name</th>';
+	        echo '<th>Date</th>';
+			echo '<th>Location</th>';
+			echo '<th>Fees</th>'; 
+			echo '<br/>';
+	
 		while ($row = $events->fetch_assoc()) 
 		{
-    		echo $row['Name'];
+			echo "<tr>";
+	    		echo "<td>".$row['Name']."</td>";
+				echo "<td>".$row['Date']."</td>";
+				echo "<td>".$row['Location']."</td>";
+				echo "<td>".$row['Fees']."</td>";
+			echo "</tr>";	
 		}
+		echo '</table>';
 	?>
 </body>
 </html>
