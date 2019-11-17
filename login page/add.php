@@ -8,7 +8,9 @@
 	$tech = ( !empty($_GET['tech']) ) ? $_GET['tech']: "";
 	$fees = ( !empty($_GET['fees']) ) ? $_GET['fees']: "";
 
-$query = "INSERT INTO Events (Name, Date, Location, Fees, Tech ) VALUES ('$name', $date,'$location', $fees,'$tech')";
+	$date = date("Y-m-d", strtotime($date));
+
+$query = "INSERT INTO Events (Name, Date, Location, Fees, Tech ) VALUES ('$name', '$date', '$location', $fees,'$tech')";
 
 try{
 
@@ -31,6 +33,7 @@ try{
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="login.css">
     <title>Add Events</title>
 </head>
 
