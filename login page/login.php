@@ -38,7 +38,9 @@
 		else
 		{
 			echo 'LOGIN SUCCESFULL'.'<br/>';
-			echo 'Welcome '.$_GET["uname"].'<br/>'; 
+			echo 'Welcome '.$_GET["uname"].'<br/>';
+
+//	Add an Event 
 			echo '<form action="add.php" method="get">
             	  <fieldset>
 				    <legend>Add an Event</legend>
@@ -68,6 +70,33 @@
 						</p>
 			    	</fieldset>
 					</form>';
+
+//	Delete an event
+
+		$result = mysqli_query($conn, "select Name, Date, Location, Fees, Tech from Events");
+		echo '<fieldset>';
+		echo '<legend>Delete an Event</legend>';
+		echo '<table>';
+	    echo '<th>NAME</th>';
+    	echo '<th>DATE</th>';
+		echo '<th>LOCATION</th>';
+    	echo '<th>FEES</th>';
+		echo '<th>TECH</th>';
+    	echo '<th>OPERATION</th>';
+
+	    while ($events = $result->fetch_assoc()) 
+		{
+	        echo "<tr><form action=\"delete.php\" method=\"get\">";
+    	    echo "<td><input type='text' name='name' value='" . $events['Name'] .  "' ></td>";
+    	    echo "<td><input type='text' value='" . $events['Date'] .  "' disabled></td>";
+			echo "<td><input type='text' value='" . $events['Location'] .  "' disabled></td>";
+    	    echo "<td><input type='text' value='" . $events['Fees'] .  "' disabled></td>";
+			echo "<td><input type='text' value='" . $events['Tech'] .  "' disabled></td>";
+    	    echo "<td><input type=\"submit\" value=\"Delete\"></td>";
+    	    echo "</form></tr>";
+	    }
+
+	    echo '</table><hr><br><br></fieldset>';
 		}
 	?>
 </body>

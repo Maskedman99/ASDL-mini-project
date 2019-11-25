@@ -9,7 +9,8 @@ body {
 fieldset {
 	margin-top: 5%;
 	text-align: left;
-	width: 30%;
+	width: auto;
+	height: auto;
 	font-size: 90%
 }
 
