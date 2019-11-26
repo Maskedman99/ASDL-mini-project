@@ -31,12 +31,13 @@
 	
 		while ($row = $events->fetch_assoc()) 
 		{
-			echo "<tr>";
-	    		echo "<td>".$row['Name']."</td>";
+			echo "<tr><form action=\"registration.php\" method=\"get\">";
+	    		echo "<td><input type='text' name='name' value='" . $row['Name'] .  "' readonly></td>";
 				echo "<td>".$row['Date']."</td>";
 				echo "<td>".$row['Location']."</td>";
 				echo "<td>".$row['Fees']."</td>";
-			echo "</tr>";	
+				echo "<td><input type=\"submit\" value=\"Register\"></td>";
+    	    echo "</form></tr>";
 		}
 		echo '</table>';
 	?>

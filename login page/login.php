@@ -87,11 +87,11 @@
 	    while ($events = $result->fetch_assoc()) 
 		{
 	        echo "<tr><form action=\"delete.php\" method=\"get\">";
-    	    echo "<td><input type='text' name='name' value='" . $events['Name'] .  "' ></td>";
-    	    echo "<td><input type='text' value='" . $events['Date'] .  "' disabled></td>";
-			echo "<td><input type='text' value='" . $events['Location'] .  "' disabled></td>";
-    	    echo "<td><input type='text' value='" . $events['Fees'] .  "' disabled></td>";
-			echo "<td><input type='text' value='" . $events['Tech'] .  "' disabled></td>";
+    	    echo "<td><input type='text' name='name' value='" . $events['Name'] .  "' readonly></td>";
+    	    echo "<td><input type='text' value='" . $events['Date'] .  "' readonly></td>";
+			echo "<td><input type='text' value='" . $events['Location'] .  "' readonly></td>";
+    	    echo "<td><input type='text' value='" . $events['Fees'] .  "' readonly></td>";
+			echo "<td><input type='text' value='" . $events['Tech'] .  "' readonly></td>";
     	    echo "<td><input type=\"submit\" value=\"Delete\"></td>";
     	    echo "</form></tr>";
 	    }
