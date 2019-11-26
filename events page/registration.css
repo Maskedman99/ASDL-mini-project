@@ -1,7 +1,6 @@
 body {
     background: #000000;
 	color: #FFFFFF;
-	display: flex;
 	justify-content: center;
 }
 
@@ -23,7 +22,7 @@ input {
 }
 
 fieldset {
-	width: auto;
+	width: 50%
 	margin-top: 20%;	
 }
 

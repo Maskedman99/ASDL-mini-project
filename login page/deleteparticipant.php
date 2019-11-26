@@ -5,16 +5,16 @@
 	$name = ( !empty($_GET['name']) ) ? $_GET['name']: "";
 	$class = ( !empty($_GET['class']) ) ? $_GET['class']: "";
 	$rollno = ( !empty($_GET['rollno']) ) ? $_GET['rollno']: "";
-	$eventname = ( !empty($_GET['eventname']) ) ? $_GET['eventname']: "";
+	$event = ( !empty($_GET['event']) ) ? $_GET['event']: "";
 
-$query = "INSERT INTO Registration (Name, Class, Rollno, Eventname) VALUES ('$name', '$class', '$rollno', '$eventname')";
+$query = "DELETE FROM Registration WHERE Name = '$name' and Class = '$class' and Rollno = '$rollno' and Eventname = '$event'";
 
 try{
 
     if ($conn->query($query) === TRUE) {
-        echo "Record Created";
+        echo "Event Deleted";
     } else {
-        echo "Error Creating record: " . $conn->error;
+        echo "Error Deleting event: " . $conn->error;
     }
 
     //close the connection to DB
@@ -30,11 +30,11 @@ try{
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="events.css">
-    <title>Register for Events</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+    <title>Remove Participant</title>
 </head>
 
 <body>
-	<h1>Adding Participant</h1>	
+	<h1>Deleting Entry</h1>	
 	</body>
 </html>

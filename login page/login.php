@@ -82,7 +82,6 @@
 		echo '<th>LOCATION</th>';
     	echo '<th>FEES</th>';
 		echo '<th>TECH</th>';
-    	echo '<th>OPERATION</th>';
 
 	    while ($events = $result->fetch_assoc()) 
 		{
@@ -96,7 +95,31 @@
     	    echo "</form></tr>";
 	    }
 
-	    echo '</table><hr><br><br></fieldset>';
+	    echo '</table><br></fieldset>';
+
+//	Delete a Participant
+
+		$result = mysqli_query($conn, "select Name, Class, Rollno, Eventname from Registration");
+		echo '<fieldset>';
+		echo '<legend>Delete a Participant</legend>';
+		echo '<table>';
+	    echo '<th>NAME</th>';
+    	echo '<th>CLASS</th>';
+		echo '<th>ROLL NO</th>';
+    	echo '<th>EVENT NAME</th>';
+
+	    while ($details = $result->fetch_assoc()) 
+		{
+	        echo "<tr><form action=\"deleteparticipant.php\" method=\"get\">";
+    	    echo "<td><input type='text' name='name' value='" . $details['Name'] .  "' readonly></td>";
+    	    echo "<td><input type='text' name='class' value='" . $details['Class'] .  "' readonly></td>";
+			echo "<td><input type='text' name='rollno' value='" . $details['Rollno'] .  "' readonly></td>";
+    	    echo "<td><input type='text' name='event' value='" . $details['Eventname'] .  "' readonly></td>";
+    	    echo "<td><input type=\"submit\" value=\"Delete\"></td>";
+    	    echo "</form></tr>";
+	    }
+
+	    echo '</table><br></fieldset>';
 		}
 	?>
 </body>
