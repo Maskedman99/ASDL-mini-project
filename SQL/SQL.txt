@@ -1,0 +1,44 @@
+===Database ASD
+
+== Table structure for table Admin
+
+|------
+|Column|Type|Null|Default
+|------
+|ID|int(11)|No|
+|Name|varchar(100)|No|
+|Password|varchar(500)|No|
+== Dumping data for table Admin
+
+|1|admin1|admin1pass
+|2|admin2|admin2pass
+== Table structure for table Events
+
+|------
+|Column|Type|Null|Default
+|------
+|//**Name**//|varchar(100)|No|
+|Date|date|No|
+|Location|varchar(500)|No|
+|Fees|int(11)|No|
+|Tech|varchar(5)|No|
+== Dumping data for table Events
+
+|NonTechEvent1|2019-12-12|Ground|500|N
+|nontechevent2|2019-12-25|410|250|N
+|TechEvent1|2019-11-07|Auditorium|100|Y
+|TechEvent4|2019-11-07|Loacb|0|Y
+== Table structure for table Registration
+
+|------
+|Column|Type|Null|Default
+|------
+|Name|varchar(200)|No|
+|Class|varchar(100)|No|
+|Rollno|int(11)|No|
+|Eventname|varchar(100)|No|
+== Dumping data for table Registration
+
+|rohit|cs5b44|44|hi hi
+|name1|45f|34|hi hi
+|name2|df4|54|TechEvent4
